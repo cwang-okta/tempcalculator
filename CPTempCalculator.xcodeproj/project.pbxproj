@@ -19,6 +19,9 @@
 		2618966A188C52E800920A60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26189652188C52E700920A60 /* UIKit.framework */; };
 		26189672188C52E800920A60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26189670188C52E800920A60 /* InfoPlist.strings */; };
 		26189674188C52E800920A60 /* CPTempCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26189673188C52E800920A60 /* CPTempCalculatorTests.m */; };
+		2618968A188C535500920A60 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26189688188C535500920A60 /* CalculatorViewController.m */; };
+		2618968B188C535500920A60 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26189689188C535500920A60 /* CalculatorViewController.xib */; };
+		2618968E188DC6C500920A60 /* TriangleUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2618968D188DC6C500920A60 /* TriangleUIView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,11 @@
 		2618966F188C52E800920A60 /* CPTempCalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CPTempCalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		26189671188C52E800920A60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		26189673188C52E800920A60 /* CPTempCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPTempCalculatorTests.m; sourceTree = "<group>"; };
+		26189687188C535500920A60 /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		26189688188C535500920A60 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
+		26189689188C535500920A60 /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
+		2618968C188DC6C500920A60 /* TriangleUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriangleUIView.h; sourceTree = "<group>"; };
+		2618968D188DC6C500920A60 /* TriangleUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriangleUIView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,11 @@
 				2618965E188C52E700920A60 /* AppDelegate.m */,
 				26189660188C52E700920A60 /* Images.xcassets */,
 				26189655188C52E700920A60 /* Supporting Files */,
+				26189687188C535500920A60 /* CalculatorViewController.h */,
+				26189688188C535500920A60 /* CalculatorViewController.m */,
+				26189689188C535500920A60 /* CalculatorViewController.xib */,
+				2618968C188DC6C500920A60 /* TriangleUIView.h */,
+				2618968D188DC6C500920A60 /* TriangleUIView.m */,
 			);
 			path = CPTempCalculator;
 			sourceTree = "<group>";
@@ -220,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26189659188C52E700920A60 /* InfoPlist.strings in Resources */,
+				2618968B188C535500920A60 /* CalculatorViewController.xib in Resources */,
 				26189661188C52E700920A60 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +255,8 @@
 			files = (
 				2618965F188C52E700920A60 /* AppDelegate.m in Sources */,
 				2618965B188C52E700920A60 /* main.m in Sources */,
+				2618968E188DC6C500920A60 /* TriangleUIView.m in Sources */,
+				2618968A188C535500920A60 /* CalculatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +378,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CPTempCalculator/CPTempCalculator-Prefix.pch";
 				INFOPLIST_FILE = "CPTempCalculator/CPTempCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -375,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CPTempCalculator/CPTempCalculator-Prefix.pch";
 				INFOPLIST_FILE = "CPTempCalculator/CPTempCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

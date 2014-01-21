@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController">
+            <connections>
+                <outlet property="fromUnitControl" destination="Cdm-Q6-nLE" id="VcS-OG-NIf"/>
+                <outlet property="fromUnitLabel" destination="seH-Y6-c36" id="tiA-Em-X6b"/>
+                <outlet property="fromValue" destination="EaD-Q4-ggD" id="dbd-8W-gw6"/>
+                <outlet property="toValueLabel" destination="okt-8h-fvN" id="t8E-X1-CK2"/>
+                <outlet property="triangleView" destination="cJI-af-IAp" id="rnW-Hh-IyR"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYT-uu-pST">
+                    <rect key="frame" x="0.0" y="52" width="320" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Value" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EaD-Q4-ggD">
+                            <rect key="frame" x="18" y="28" width="284" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="284" id="JQo-Ve-66n"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                        </textField>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Cdm-Q6-nLE">
+                            <rect key="frame" x="18" y="78" width="284" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="284" id="3Sp-3u-kxG"/>
+                            </constraints>
+                            <segments>
+                                <segment title="Fahrenheit"/>
+                                <segment title="Celsius"/>
+                            </segments>
+                            <color key="tintColor" red="0.14429393540811375" green="0.31532285157926176" blue="0.73248166454081631" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="onTap:" destination="-1" eventType="valueChanged" id="gND-I1-ooT"/>
+                            </connections>
+                        </segmentedControl>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fahrenheit" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seH-Y6-c36">
+                            <rect key="frame" x="18" y="28" width="275" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="Cdm-Q6-nLE" secondAttribute="centerX" id="8KG-VM-B53"/>
+                        <constraint firstItem="EaD-Q4-ggD" firstAttribute="top" secondItem="bYT-uu-pST" secondAttribute="top" constant="28" id="Bpg-yt-gYJ"/>
+                        <constraint firstItem="seH-Y6-c36" firstAttribute="top" secondItem="EaD-Q4-ggD" secondAttribute="top" id="ULc-wQ-bBP"/>
+                        <constraint firstAttribute="centerX" secondItem="EaD-Q4-ggD" secondAttribute="centerX" id="hH6-7E-BvO"/>
+                        <constraint firstItem="seH-Y6-c36" firstAttribute="trailing" secondItem="EaD-Q4-ggD" secondAttribute="trailing" constant="-9" id="jhe-0r-cJw"/>
+                        <constraint firstItem="seH-Y6-c36" firstAttribute="leading" secondItem="EaD-Q4-ggD" secondAttribute="leading" id="rsU-kD-Uo4"/>
+                        <constraint firstAttribute="height" constant="126" id="xND-0s-zJ4"/>
+                        <constraint firstItem="EaD-Q4-ggD" firstAttribute="bottom" secondItem="seH-Y6-c36" secondAttribute="bottom" id="xbO-4u-Sdd"/>
+                        <constraint firstItem="Cdm-Q6-nLE" firstAttribute="top" secondItem="EaD-Q4-ggD" secondAttribute="bottom" constant="20" id="ykC-z7-Wv2"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-af-IAp" customClass="TriangleUIView">
+                    <rect key="frame" x="0.0" y="178" width="320" height="52"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="5Df-iD-l5O"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8n-29-OE2">
+                    <rect key="frame" x="0.0" y="233" width="320" height="61"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQW-3g-pfV">
+                            <rect key="frame" x="0.0" y="6" width="320" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okt-8h-fvN">
+                                    <rect key="frame" x="94" y="9" width="133" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="320" id="yzS-Qp-aGA"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="jQW-3g-pfV" secondAttribute="bottom" constant="15" id="15b-vO-p8B"/>
+                        <constraint firstAttribute="height" constant="61" id="3R7-Q6-e1g"/>
+                        <constraint firstItem="jQW-3g-pfV" firstAttribute="top" secondItem="q8n-29-OE2" secondAttribute="top" constant="6" id="Uvs-C2-y0z"/>
+                        <constraint firstAttribute="centerX" secondItem="jQW-3g-pfV" secondAttribute="centerX" id="jgA-FX-jaz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="q8n-29-OE2" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="4eR-gI-bJT"/>
+                <constraint firstItem="q8n-29-OE2" firstAttribute="top" secondItem="cJI-af-IAp" secondAttribute="bottom" constant="3" id="6oQ-UG-8CQ"/>
+                <constraint firstItem="bYT-uu-pST" firstAttribute="top" secondItem="1" secondAttribute="top" constant="52" id="8aR-7W-UXN"/>
+                <constraint firstAttribute="trailing" secondItem="bYT-uu-pST" secondAttribute="trailing" id="9Ah-ky-QaU"/>
+                <constraint firstItem="bYT-uu-pST" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="G53-1r-iVD"/>
+                <constraint firstAttribute="trailing" secondItem="cJI-af-IAp" secondAttribute="trailing" id="H5U-oI-Zcu"/>
+                <constraint firstItem="cJI-af-IAp" firstAttribute="top" secondItem="bYT-uu-pST" secondAttribute="bottom" id="cly-1Z-fhL"/>
+                <constraint firstItem="cJI-af-IAp" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="e4O-3x-10B"/>
+                <constraint firstAttribute="trailing" secondItem="q8n-29-OE2" secondAttribute="trailing" id="fcn-11-wEm"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="cNt-h7-6xF" appends="YES" id="OHT-aj-aGV"/>
+            </connections>
+        </view>
+        <tapGestureRecognizer id="cNt-h7-6xF">
+            <connections>
+                <action selector="onTap:" destination="-1" id="E83-RH-0pi"/>
+            </connections>
+        </tapGestureRecognizer>
+        <view contentMode="scaleToFill" id="1Jv-Sd-SJ3">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
